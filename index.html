@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prateek Gupta | Academic Homepage</title>
+  <meta name="description" content="PhD Candidate in Chemical Engineering at Purdue University specializing in computational biology, population balance modeling, and immune cell dynamics." />
+  
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #2563eb;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --border: #e2e8f0;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .links a:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .about p {
+      margin-bottom: 1rem;
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+
+    /* Cards & Lists */
+    .item {
+      margin-bottom: 1.5rem;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.25rem;
+    }
+
+    .item-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .item-subtitle {
+      font-size: 0.95rem;
+      color: var(--primary-light);
+      font-weight: 500;
+    }
+
+    .item-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .item-details {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    ul.publications, ul.conferences {
+      list-style: none;
+    }
+
+    ul.publications li, ul.conferences li {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    ul.publications li::before, ul.conferences li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .pub-authors {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .pub-journal {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+
+    .badge-primary {
+      background: #eff6ff;
+      color: var(--primary-light);
+      border: 1px solid #bfdbfe;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skill-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .skill-card h3 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      background: var(--bg-alt);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Prateek Gupta</h1>
+      <p class="subtitle">PhD Candidate in Chemical Engineering | Purdue University</p>
+      <div class="links">
+        <a href="mailto:gupt1042@purdue.edu"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://scholar.google.com/citations?user=El1jQOUAAAAJ&hl=en" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+        <a href="https://github.com/pgvsec" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- About Section -->
+    <section class="about">
+      <h2><i class="fa-solid fa-user"></i> About Me</h2>
+      <p>
+        I am a PhD Candidate in the Davidson School of Chemical Engineering at Purdue University, advised by <strong>Dr. Doraiswami Ramkrishna</strong>. My research interfaces <strong>computational systems biology</strong>, <strong>nonlinear dynamical systems</strong>, and <strong>machine learning</strong>.
+      </p>
+      <p>
+        My work centers on mechanistic and population-balance modeling of macrophage polarization and wound healing dynamics. By integrating cybernetic control theory with physics-informed deep learning and subspace reduction methods, I build predictive architectures that simulate emergent heterogeneity and prioritize interventions across cellular networks.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Purdue University</span>
+            <div class="item-subtitle">PhD in Chemical Engineering (Advisor: Dr. Doraiswami Ramkrishna)</div>
+          </div>
+          <span class="item-date">2023 – Present</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">National Institute of Technology (NIT), Rourkela</span>
+            <div class="item-subtitle">B.Tech in Chemical Engineering (Ranked 1st in Department)</div>
+          </div>
+          <span class="item-date">2018 – 2022</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section>
+      <h2><i class="fa-solid fa-flask"></i> Research Experience</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Graduate Research Assistant</span>
+          <span class="item-date">2023 – Present</span>
+        </div>
+        <div class="item-subtitle">Purdue University · Computational Systems Biology & Immunology</div>
+        <div class="item-details">
+          <ul>
+            <li>Formulated mechanistic models linking metabolic resource allocation (L-arginine pathway) to inflammatory vs. repair macrophage states.</li>
+            <li>Compressed high-dimensional regulatory models into lower-dimensional latent spaces via dynamics-preserving autoencoders for population balance simulation.</li>
+            <li>Developed physics-informed neural network frameworks to perform in silico cytokine and gene-knockout screening.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Project Associate</span>
+          <span class="item-date">June 2022 – May 2023</span>
+        </div>
+        <div class="item-subtitle">IIT Kanpur · Computational Biomechanics & Fluid Dynamics</div>
+        <div class="item-details">
+          <ul>
+            <li>Conducted OpenFOAM simulations on supercomputer "Param Sanganak" analyzing bulk viscosity effects in high-speed flows.</li>
+            <li>Executed CFD and Fluid-Structure Interaction (FSI) studies of stenosed human coronary and pulmonary arteries using ANSYS Fluent and user-defined functions (UDFs).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section>
+      <h2><i class="fa-solid fa-book"></i> Selected Publications</h2>
+      <ul class="publications">
+        <li>
+          <div class="pub-title">Behind Macrophage Polarization in Wound Healing: A Mathematical Quest</div>
+          <div class="pub-authors"><strong>Gupta, P.</strong>, & Ramkrishna, D.</div>
+          <div class="pub-journal">Processes, 14(5), 790 (2026).</div>
+          <a class="badge badge-primary" href="https://www.mdpi.com/2227-9717/14/5/790" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Article</a>
+        </li>
+        <li>
+          <div class="pub-title">Solving High-Dimensional Population Balance Equations via Dynamics-Preserving Autoencoders</div>
+          <div class="pub-authors"><strong>Gupta, P.</strong>, & Ramkrishna, D.</div>
+          <div class="pub-journal">Under Review (2026).</div>
+        </li>
+        <li>
+          <div class="pub-title">Effect of Confinement on Flow Around a Rotating Elliptic Cylinder in Laminar Flow Regime</div>
+          <div class="pub-authors"><strong>Gupta, P.</strong>, Panda, S., Sahu, A. K., & Kumar, D.</div>
+          <div class="pub-journal">ASME Journal of Fluids Engineering, 145(10): 101301 (2023).</div>
+        </li>
+        <li>
+          <div class="pub-title">On the estimation of bulk viscosity of dilute nitrogen gas using equilibrium molecular dynamics approach</div>
+          <div class="pub-authors">Sharma, B., Kumar, R., <strong>Gupta, P.</strong>, Pareek, S., & Singh, A.</div>
+          <div class="pub-journal">Physics of Fluids, 34(5) (2022).</div>
+        </li>
+        <li>
+          <div class="pub-title">Thrombosis Modelling in a Stenosed Artery</div>
+          <div class="pub-authors"><strong>Gupta, P.</strong>, Kumar, R., Panda, S., & Riyan, M.</div>
+          <div class="pub-journal">Conference on Fluid Mechanics and Fluid Power, Springer Nature Singapore (2022).</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Selected Conferences -->
+    <section>
+      <h2><i class="fa-solid fa-person-chalkboard"></i> Selected Talks & Conferences</h2>
+      <ul class="conferences">
+        <li>
+          <strong>Role of Cybernetic Oversight in Shaping Macrophage Population Heterogeneity</strong><br />
+          AIChE Annual Meeting (2026).
+        </li>
+        <li>
+          <strong>Modeling Macrophage Polarization in Wounds: A Heterogeneity Perspective</strong><br />
+          34th Conference on Intelligent Systems for Molecular Biology (ISMB), Washington, DC (July 2026).
+        </li>
+        <li>
+          <strong>Physics-Informed Neural Networks for Population Balance Modeling of Macrophage Polarization</strong><br />
+          8th International Conference on Population Balance Modeling, Purdue University (August 2025).
+        </li>
+        <li>
+          <strong>Cybernetic Modeling of the L-Arginine Pathway in Macrophages During Wound Healing</strong><br />
+          17th Great Lakes Bioinformatics (GLBIO) Conference, University of Minnesota (May 2025).
+        </li>
+      </ul>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2><i class="fa-solid fa-code"></i> Technical Toolkit</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Computational Biology</h3>
+          <p>Gene Regulatory Networks, Population Balance Models, Systems Biology, Single-Cell RNA-seq (Seurat, Monocle), Parameter Estimation.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Deep Learning & Math</h3>
+          <p>Physics-Informed ML (PINNs), Autoencoders, Nonlinear Dynamics, Operator Theory, Reduced-Order Modeling.</p>
+        </div>
+        <div class="skill-card">
+          <h3>Scientific Computing</h3>
+          <p>MATLAB, Python, R, C, Bash, OpenFOAM, ANSYS Fluent, Slurm Cluster Computing.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Prateek Gupta. Built for GitHub Pages.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
